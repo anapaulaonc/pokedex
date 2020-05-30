@@ -1,0 +1,7 @@
+GET/users
+name: string 
+email:
+password
+
+-GET / users/:id
+name,email
