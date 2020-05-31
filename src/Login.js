@@ -1,9 +1,20 @@
 import React from 'react';
 import {ErrorMessage, Formik, Form, Field} from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
+
 
 const Login = () => {
-    const handleSubmit = values => console.log(values)
+    const handleSubmit = values => {
+        axios.post('https://pokedex20201.herokuapp.com/users/username', values)
+            .then ( resp =>{
+                const { data } = resp
+                if(data){
+                    localStorage.setItem('app-token',data)
+                }
+            })    
+    }
+
     const validations = yup.object().shape({
         email: yup.string().email().required(),
         password: yup.string().min(6).required()
@@ -44,7 +55,6 @@ const Login = () => {
         
         </div>
     )
-
-
 }
+
 export default Login

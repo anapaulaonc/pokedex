@@ -5,6 +5,8 @@ import Login from './Login.js';
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import Cadastro from './cadastro.js';
 import Api from './Api.js';
+import Pokemon from './pokemon.js'
+
 
 const PrivateRoute = ({ component: Component, ...rest } ) => (
     <Route{...rest} render={props => (
@@ -20,18 +22,17 @@ const Routes = () => (
     <BrowserRouter>
     <Switch>
         <Route exact path="/">
-        <Login/>
+        <Home/>
         </Route>
         <Route path="/cadastro">
         <Cadastro/>
         </Route> 
-        <Route path="/pokemon" >
+        <Route path="/pokedex" >
         <Api/>
         </Route>
-        <PrivateRoute path="/main">
-            
-            
-        </PrivateRoute> 
+        <Route path="/pokemon/:name">
+        <Pokemon/>
+        </Route>
     </Switch>
     </BrowserRouter>
 );
