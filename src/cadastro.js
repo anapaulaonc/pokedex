@@ -1,54 +1,43 @@
-import React, {useState} from 'react';
-import './App.css';
+import React, {useState, useRef} from 'react';
+import {ErrorMessage, Formik, Form, Field} from 'formik';
+import * as yup from 'yup';
+import axios from 'axios';
+import "./login.css";
+import {useHistory} from 'react-router-dom';
 
-function Cadastro () {
-    const [email, setEmail] = useState(''),
-    [senha, setSenha] = useState('');
-    function handleSubmit(event){
-      event.preventDefault();
-      alert("Seu email: "+email+"\nSua senha: "+senha );
-      
-    }
-    return (
-      <div>
-        <div id="login">
-        <h2 id="titulo">
-          CADASTRO:
-        </h2>  
-        <form
-        id="formulario"
-        method="POST"
-        autoComplete="off"
-        placeholder="Digite seu email"
-        >
-          <input class="input"
-          type="email"
-          name="email"
-          className="inputText"
-          value={email}
-          onChange={event => setEmail(event.target.value)}
-          />
-          <br/>
-          <input
-          type="password"
-          name="senha"
-          className="inputText"
-          placeholder="Digite sua senha"
-          value={senha}
-          onChange={event => setSenha(event.target.value)}
-          />
-          <input
-          type="submit"
-          className="inputButton"
-          value="Enviar"
-          />
-        </form> 
-      
-      </div>  
-      </div>  
-    
-    );
+const Cadastro = () => {
+  const input = useRef()
+  const handleSubmit = (e) => {
+      e.preventDefault()
+      console.log(input)
+
+      axios.post(`https://pokedex20201.herokuapp.com/users/${input}`)
+          .then ( () => {
+                  localStorage.setItem('app-token', JSON.stringify(input))
+                  history.push('/pokedex')
+          })    
+      .catch((error) => {
+          console.log(error)
+      })    
   }
+
+  let history = useHistory() 
+  return(
+      <div>
+          <form className="Form" onSubmit={handleSubmit}>
+              <div className="Form-Group">
+                  <input type="text"
+                      ref={input}
+                      name="username"
+                      className="Form-Field"
+                  />
+              </div>     
+              <button className="Form-Btn" type="submit"> Cadastrar </button>
+          </form>
+      
+      </div>
+  )
+}
   
   export default Cadastro;
 

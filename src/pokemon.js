@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 
 const Pokemon = () =>{
     let {name} = useParams()
@@ -11,6 +11,18 @@ const Pokemon = () =>{
         setPokemon(res.data);
         })
     },[])
+    let history = useHistory() 
+    const favoritar = () => {
+        const user = JSON.parse(localStorage.getItem('app-token'))
+        axios.post(`https://pokedex20201.herokuapp.com/users/${user}/starred/${name}`)
+            .then( () => {
+                history.push(`/favoritos`)
+            })
+            .catch((error) => {
+                console.log(error)
+            })  
+
+    }
     return (
         <>
         <button onClick= {() => window.history.back()}>voltar</button>
@@ -23,7 +35,8 @@ const Pokemon = () =>{
                        <p className = "weight"> peso: {pokemons.weight} kg </p>  
                        <p className ="height"> altura: {pokemons.height} cm </p> 
                        <p className= "kind"> tipo: {pokemons.kind} </p> 
-                    </div>                
+                       <button className="Form-Btn" onClick= {favoritar}>Favoritar</button>
+                    </div>                      
             }
        </div>
        </>

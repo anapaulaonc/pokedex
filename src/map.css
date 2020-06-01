@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(#0f1a2b, #411d63);
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20%;
+    margin: 10%;
+}
+
+.pokemon-size {}
+
+.pokemon {
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 10px;
+    height: 300px;
+    width: 150px;
+    color: white;
+    background: #1C1C1C;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button-previous {
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    outline: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #1C1C1C;
+    color: whit;
+}
+
+.button-previous:hover {
+    background-color: #1C1C1C;
+    color: cornsilk;
+}
+
+.button-size {
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}

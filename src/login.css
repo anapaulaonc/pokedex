@@ -1,0 +1,53 @@
+body {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#0f1a2b, #411d63);
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+.pokemon-card {
+    text-align: center;
+    margin-top: 10%;
+    background-color: none;
+    width: 400px;
+    height: 600px;
+    border-radius: 24px;
+    border: solid 8px #1C1C1C;
+}
+
+.skills {
+    margin-top: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    padding: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.type {
+    padding: 10px;
+}
+
+.weigth {
+    border-top: solid 2px #1C1C1C;
+    padding: 10px;
+}
+
+.heigth {
+    border-top: solid 2px #1C1C1C;
+    padding: 10px;
+}

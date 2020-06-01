@@ -1,11 +1,11 @@
 import React, {children} from 'react';
 import { Autenticando } from './auth';
-import Home from './Home.js';
 import Login from './Login.js';
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import Cadastro from './cadastro.js';
 import Api from './Api.js';
 import Pokemon from './pokemon.js'
+import Favoritos from './favoritos.js'
 
 
 const PrivateRoute = ({ component: Component, ...rest } ) => (
@@ -22,7 +22,7 @@ const Routes = () => (
     <BrowserRouter>
     <Switch>
         <Route exact path="/">
-        <Home/>
+        <Login/>
         </Route>
         <Route path="/cadastro">
         <Cadastro/>
@@ -32,6 +32,9 @@ const Routes = () => (
         </Route>
         <Route path="/pokemon/:name">
         <Pokemon/>
+        </Route>
+        <Route path="/favoritos">
+        <Favoritos/>
         </Route>
     </Switch>
     </BrowserRouter>

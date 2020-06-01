@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Pokemon from './pokemon.js'
-import {Route, useHistory} from 'react-router-dom'
+import {Route, useHistory} from 'react-router-dom';
+import "./map.css";
 
 const Api = () => {
     const [pokemons, setPokemon] = useState([]);
@@ -15,6 +16,7 @@ const Api = () => {
         setNextPage(res.data.nextPage);
         console.log(res.data);
         })
+
     },[])
     let history = useHistory() 
     return(
