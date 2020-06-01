@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: aqua;
     margin: 0;
@@ -51,3 +52,11 @@ h1 {
     border-top: solid 2px #1C1C1C;
     padding: 10px;
 }
+=======
+form {
+    display: flex;
+    justify-content: center;
+    background: #1c1c1c;
+    width: 400px;
+}
+>>>>>>> 1389cfcfcfa71e17f310628b61bb3b54d25c3e04
