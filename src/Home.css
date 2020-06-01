@@ -1,11 +1,3 @@
-body {
-    background-color: white;
-    padding: 0;
-    font-family: sans-serif;
-    background: grey;
-}
-
-section{
-    width:300px;
-    padding:40px;
+section {
+    background-color: grey;
 }

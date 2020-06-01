@@ -1,0 +1,6 @@
+form {
+    display: flex;
+    justify-content: center;
+    background: #1c1c1c;
+    width: 400px;
+}
