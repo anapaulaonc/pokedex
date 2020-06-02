@@ -1,62 +1,57 @@
-<<<<<<< HEAD
-body {
-    background-color: aqua;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(#0f1a2b, #411d63);
-}
-
-.box-container {
-    display: flex;
-    justify-content: center;
-}
-
-h1 {
-    color: whitesmoke;
-    font-weight: 700;
-}
-
-.pokemon-card {
-    text-align: center;
-    margin-top: 10%;
-    background-color: none;
-    width: 400px;
-    height: 600px;
-    border-radius: 24px;
-    border: solid 8px #1C1C1C;
-}
-
-.skills {
-    margin-top: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: start;
-    padding: 40px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: whitesmoke;
-}
-
-.type {
-    padding: 10px;
-}
-
-.weigth {
-    border-top: solid 2px #1C1C1C;
-    padding: 10px;
-}
-
-.heigth {
-    border-top: solid 2px #1C1C1C;
-    padding: 10px;
-}
-=======
-form {
-    display: flex;
-    justify-content: center;
-    background: #1c1c1c;
-    width: 400px;
-}
->>>>>>> 1389cfcfcfa71e17f310628b61bb3b54d25c3e04
+          .box-container {
+              display: flex;
+              justify-content: center;
+              margin-top: 20%;
+          }
+          
+          .Form {
+              display: flex;
+              flex-direction: column;
+              width: 400px;
+              top: 50%;
+              justify-content: center;
+              background: #1C1C1C;
+              align-items: center;
+              border-radius: 24px;
+              height: 500px;
+          }
+          
+          .Login-title {
+              color: whitesmoke;
+              text-transform: uppercase;
+          }
+          
+          .Form-Btn {
+              color: whitesmoke;
+              background: none;
+              border: none;
+              padding: 14px 10px;
+              text-align: center;
+              border: solid whitesmoke;
+              outline: none;
+              border-radius: 24px;
+              margin-top: 20px;
+              transition: 0.25s;
+              width: 120px;
+              cursor: pointer;
+          }
+          
+          
+          .Form-Field {
+              color: whitesmoke;
+              background: none;
+              border: none;
+              padding: 14px 10px;
+              text-align: center;
+              border: solid whitesmoke;
+              outline: none;
+              border-radius: 24px;
+              margin-top: 20px;
+              transition: 0.25s;
+              width: 220px;
+          }
+          
+          .Form-Fiel:focus {
+              width: 280px;
+              border-color: #411d63;
+          }

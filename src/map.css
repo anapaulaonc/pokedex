@@ -2,12 +2,10 @@ body {
     background: linear-gradient(#0f1a2b, #411d63);
 }
 
-.box-container {
+.pokemonContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 20%;
-    margin: 10%;
 }
 
 .pokemon-size {}
@@ -32,26 +30,25 @@ body {
     cursor: pointer;
 }
 
-.button-previous {
+.button-page {
     cursor: pointer;
     border: none;
-    width: 200px;
-    height: 60px;
     text-align: center;
+    height: 40px;
     margin: 20px;
     padding: 10px;
     font-weight: 600;
-    font-size: 30px;
     outline: none;
     border-radius: 10px;
     text-transform: uppercase;
     background-color: #1C1C1C;
-    color: whit;
+    color: white;
 }
 
-.button-previous:hover {
+.button-page:hover {
     background-color: #1C1C1C;
     color: cornsilk;
+    opacity: 80%;
 }
 
 .button-size {

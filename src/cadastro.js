@@ -11,9 +11,9 @@ const Cadastro = () => {
       e.preventDefault()
       console.log(input)
 
-      axios.post(`https://pokedex20201.herokuapp.com/users/${input}`)
+      axios.post(`https://pokedex20201.herokuapp.com/users/`, {username:input.current.value})
           .then ( () => {
-                  localStorage.setItem('app-token', JSON.stringify(input))
+                  localStorage.setItem('app-token', JSON.stringify(input.current.value))
                   history.push('/pokedex')
           })    
       .catch((error) => {

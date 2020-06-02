@@ -33,8 +33,8 @@ const Routes = () => (
         <Route path="/pokemon/:name">
         <Pokemon/>
         </Route>
-        <Route path="/favoritos">
-        <Favoritos/>
+        <Route path="/favoritos/:name" component={Favoritos}>
+        {/* <Favoritos/> */}
         </Route>
     </Switch>
     </BrowserRouter>

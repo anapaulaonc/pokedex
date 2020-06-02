@@ -11,12 +11,14 @@ const Pokemon = () =>{
         setPokemon(res.data);
         })
     },[])
+
     let history = useHistory() 
     const favoritar = () => {
         const user = JSON.parse(localStorage.getItem('app-token'))
         axios.post(`https://pokedex20201.herokuapp.com/users/${user}/starred/${name}`)
             .then( () => {
-                history.push(`/favoritos`)
+                let username = JSON.parse(localStorage.getItem('app-token'))
+                history.push({pathname:`/favoritos/${username}`, state:{name}})
             })
             .catch((error) => {
                 console.log(error)
